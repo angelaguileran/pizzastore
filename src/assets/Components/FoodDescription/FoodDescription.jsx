@@ -24,12 +24,11 @@ const FoodDescription = ({ items }) => {
   }, [params.id, items]);
 
   useEffect(() => {
-    // Actualizar el estado local del artículo cuando cambie el carrito
     if (item) {
       setItem((prevItem) => ({
         ...prevItem,
-        inCart: !!cart[item.id], // Comprobar si el artículo está en el carrito
-        quantity: cart[item.id]?.quantity || 0, // Obtener la cantidad del carrito
+        inCart: !!cart[item.id],
+        quantity: cart[item.id]?.quantity || 0,
       }));
     }
   }, [cart, item]);
@@ -55,7 +54,7 @@ const FoodDescription = ({ items }) => {
       <Card className="max-w-[600px]">
         <CardHeader className="flex justify-center gap-3">
           <Image
-            alt="Woman listening to music"
+            alt={item.name}
             className="object-cover"
             height={200}
             src={item.img}

@@ -7,7 +7,7 @@ export const CartProvider = ({ children }) => {
     const storedCart = localStorage.getItem("cart");
     return storedCart ? JSON.parse(storedCart) : {};
   });
-
+ 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
