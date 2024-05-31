@@ -12,9 +12,8 @@ import { useParams } from "react-router-dom";
 import ShoppingCartContext from "../ShoppingCartContext/ShoppingCartContext";
 
 const FoodDescription = ({ items }) => {
-  const { cart, handleCart, removeItemFromCart, updateQuantity } = useContext(
-    ShoppingCartContext
-  );
+  const { cart, handleCart, removeItemFromCart, updateQuantity } =
+    useContext(ShoppingCartContext);
   const [item, setItem] = useState(null);
   const params = useParams();
 
@@ -54,7 +53,7 @@ const FoodDescription = ({ items }) => {
       <Card className="max-w-[600px]">
         <CardHeader className="flex justify-center gap-3">
           <Image
-            alt={item.name}
+            alt="Woman listening to music"
             className="object-cover"
             height={200}
             src={item.img}
@@ -76,7 +75,7 @@ const FoodDescription = ({ items }) => {
         </CardBody>
         <Divider />
         <CardFooter className="flex justify-between items-center">
-        <p className="font-medium">💵 Precio: ${item.price}</p>
+          <p className="font-medium">💵 Precio: ${item.price}</p>
           <div>
             <Button onClick={handleDecrement}>-</Button>
             <span className="mx-2">{item.quantity}</span>

@@ -16,8 +16,6 @@ export default function App() {
   useEffect(() => {
     setItems(pizzaData)
   }, []);
-  console.log(items)
-
   return (
     <BrowserRouter>
       <CartProvider>

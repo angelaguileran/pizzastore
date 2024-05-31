@@ -3,7 +3,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/reac
 import { NavLink } from "react-router-dom";
 import "./NavBar.css"
 
-export default function NavBar() {
+export default function NavBar( { totalPrice } ) {
   return (
     <Navbar className="bg-slate-900	text-gray-300">
       <NavbarBrand>
